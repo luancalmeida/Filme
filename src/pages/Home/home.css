@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: rgb(250, 250, 250);
     margin: 15px;
     padding: 15px;
     
@@ -39,7 +39,7 @@
 
 .lista-filmes a{
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: deepskyblue;
     font-size: 25px;
     width: 100%;
