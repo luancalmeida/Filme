@@ -15,7 +15,7 @@ export default function Filme() {
             const response = await api.get(`r-api/?api=filmes/${id}`)
 
             if(response.data.length === 0){
-                // caso tente acessar com ID que não exista, usar history
+                // caso tente acessar com ID que não exista, usar history e vai pra home.
                 history.replace('/')
                 return
             }
@@ -34,6 +34,17 @@ export default function Filme() {
 
     }, [history, id]);
 
+    function salvaFilme(){
+        const minhaLista = localStorage.getItem('filmes');
+
+        let filmesSalvos = JSON.parse(minhaLista) || [];
+
+        //Se tiver algo salvo com o nome, ele vai ignorar.
+        const temFilme = filmesSalvos.some((filmesSalvos) => filmesSalvos.id === filme.id )
+
+
+    }
+
 
     if(loading){
         return(
@@ -51,6 +62,16 @@ export default function Filme() {
 
         <h3>Sinopse </h3>
         {filme.sinopse}
+
+        <div className="botao" >
+            <button onClick={salvaFilme} >Salvar</button>
+            <button>
+                <a target="blank" href={`https://youtube.com/results?search_query=${filme.nome} Trailer `} >
+                    Trailer
+                </a>
+
+            </button>
+        </div>
         
     </div>
     )

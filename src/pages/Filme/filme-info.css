@@ -1,0 +1,44 @@
+
+.filme-info{
+    display: flex;
+    flex-direction:column;
+    max-width: 900px;
+
+
+    
+}
+
+.filme-info img{
+    border-radius: 20px;
+
+}
+
+.filme-info button{
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.8s;
+    border: 0;
+    padding: 10px;
+
+}
+
+.filme-info button:hover{
+    background-color: deepskyblue;
+    color: floralwhite;
+}
+
+.filme-info a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.8s;
+}
+
+.filme-info a:hover{
+    background-color: deepskyblue;
+    color: floralwhite;
+}
+
