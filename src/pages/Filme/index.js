@@ -40,7 +40,16 @@ export default function Filme() {
         let filmesSalvos = JSON.parse(minhaLista) || [];
 
         //Se tiver algo salvo com o nome, ele vai ignorar.
-        const temFilme = filmesSalvos.some((filmesSalvos) => filmesSalvos.id === filme.id )
+        const hasFilme = filmesSalvos.some((filmesSalvos) => filmesSalvos.id === filme.id )
+        
+        if (hasFilme) {
+            alert('Filme salvo!')
+            return;
+        }
+
+        filmesSalvos.push(filme);
+        localStorage.setItem('filmes', JSON.stringify(filmesSalvos))
+        alert('Filme já foi salvo')
 
 
     }
