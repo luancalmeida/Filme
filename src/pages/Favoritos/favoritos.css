@@ -1,9 +1,12 @@
+
+
 #mues-filmes{
     display: flex;
-    width: 100px;
+    width: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 }
 
